@@ -27,9 +27,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Build GO Linux-Last-Version
-        run: go build {{env.FILE_NAME}}.go
+        run: go build ${{env.FILE_NAME}}.go
       - name: Build GO Windows-Last-Version
-        run: GOOS=windows GOARCH=amd64 go build {{env.FILE_NAME}}.go
+        run: GOOS=windows GOARCH=amd64 go build ${{env.FILE_NAME}}.go
       - name: Upload artifact for linux
 	        uses: actions/upload-artifact@v1.0.0
 	        with:
